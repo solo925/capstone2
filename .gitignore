@@ -1,0 +1,42 @@
+# Virtual Environments
+venv/
+env/
+*.env
+
+# Dependency Files
+pip-log.txt
+requirements.txt
+*.egg-info/
+
+# IDE/Editor Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Compiled Files
+*.pyc
+__pycache__/
+
+# Logs and Temporary Files
+*.log
+*.tmp
+
+# Configuration Files
+.env
+.DS_Store
+
+# Generated Files
+media/
+static/
+
+# Sensitive/Local Files
+*.secret
+config.ini
+
+# Database Files
+db.sqlite3
+*.db
+
+# Documentation
+docs/generated/

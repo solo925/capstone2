@@ -1,0 +1,14 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<div class="photo-essay-page-container">
+  <div class="photo-essay-page-content">
+    <p>{{ photo_essay.date_posted }}</p>
+    <div>{{ photo_essay.content|safe }}</div>
+    {% if photo_essay.file %}
+      <p><a href="{{ photo_essay.file.url }}" class="btn btn-primary" download>Download File</a></p>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
+

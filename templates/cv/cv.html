@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %} {% block content %}
+<div class="container mt-5">
+  <h1 class="mb-4">CVs</h1>
+  {% for cv in cvs %}
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">{{ cv.get_language_display }} CV</h5>
+      <p>Uploaded at: {{ cv.uploaded_at }}</p>
+      <a href="{{ cv.file.url }}" class="btn btn-primary">Download CV</a>
+    </div>
+  </div>
+  {% empty %}
+  <p>No CVs uploaded yet.</p>
+  {% endfor %}
+</div>
+{% endblock %}

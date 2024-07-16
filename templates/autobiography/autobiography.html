@@ -1,0 +1,47 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+  <h1 class="mb-4">Autobiographies</h1>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Upload Autobiography</button>
+  </form>
+  <hr>
+  {% for autobiography in autobiographies %}
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">{{ autobiography.title }}</h5>
+      <div class="card-text">{{ autobiography.content|safe }}</div>
+      <p>Date posted: {{ autobiography.date_posted }}</p>
+      {% if autobiography.file %}
+      <a href="{{ autobiography.file.url }}" class="btn btn-primary">Download Autobiography</a>
+      {% endif %}
+    </div>
+  </div>
+  {% empty %}
+  <p>No autobiographies uploaded yet.</p>
+  {% endfor %}
+</div>
+{% endblock %}
+
+
+
+
+{% comment %} {% extends 'core/base.html' %} {% block content %}
+<div class="container">
+  <h1>Autobiography</h1>
+  {% for item in autobiographies %}
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{ item.title }}</h5>
+      <p class="card-text">{{ item.content }}</p>
+      <p class="card-text">
+        <small class="text-muted">{{ item.date_posted }}</small>
+      </p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %} {% endcomment %}

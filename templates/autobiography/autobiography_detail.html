@@ -1,0 +1,15 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<div class="autobiography-page-container">
+  <div class="autobiography-page-content">
+    <h2>{{ autobiography.title }}</h2>
+    <p>{{ autobiography.content|safe }}</p>
+    {% if autobiography.file %}
+      <a href="{{ autobiography.file.url }}" class="btn btn-primary" download>Download File</a>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
+
+

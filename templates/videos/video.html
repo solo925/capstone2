@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4">Videos</h1>
+    {% for video in videos %}
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">{{ video.title }}</h5>
+            <p class="card-text">{{ video.abstract }}</p>
+            <p class="card-text"><small class="text-muted">{{ video.uploaded_at }}</small></p>
+            <video controls class="img-fluid">
+                <source src="{{ video.video_file.url }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    {% empty %}
+    <p>No videos uploaded yet.</p>
+    {% endfor %}
+</div>
+{% endblock %}

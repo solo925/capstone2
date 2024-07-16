@@ -1,0 +1,15 @@
+{% extends "core/base.html" %}
+{% block content %}
+  <h2>Photo Essays</h2>
+  <ul>
+    {% for photo_essay in photo_essays %}
+      <li>
+        <a href="{% url 'photo_essay_detail' photo_essay.pk %}">{{ photo_essay.title }}</a>
+        <p>{{ photo_essay.date_posted }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+  {% if request.user.is_superuser %}
+    <a href="{% url 'photo_essay_create' %}" class="btn btn-primary">Create New Photo Essay</a>
+  {% endif %}
+{% endblock %}

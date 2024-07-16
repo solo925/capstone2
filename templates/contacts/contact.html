@@ -1,0 +1,26 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block content %}
+  <div class="contact-container">
+    <h2><strong>Contact Information</strong></h2>
+    <h4><strong>Phone:</strong> +254702970055</h4>
+    <h4><strong>Email:</strong> <a href="mailto:solomon.onyango20@students.dkut.ac.ke">solomon.onyango20@students.dkut.ac.ke</a></h4>
+    <ul class="social-icons">
+      {% if contact.linkedin %}
+        <li><a href="{{ contact.linkedin }}" target="_blank"><img src="{% static 'icons/linkedin.png' %}" alt="LinkedIn"></a></li>
+      {% endif %}
+      {% if contact.facebook %}
+        <li><a href="{{ contact.facebook }}" target="_blank"><img src="{% static 'icons/facebook.png' %}" alt="Facebook"></a></li>
+      {% endif %}
+      {% if contact.twitter %}
+        <li><a href="{{ contact.twitter }}" target="_blank"><img src="{% static 'icons/twitter.png' %}" alt="Twitter"></a></li>
+      {% endif %}
+      {% if contact.instagram %}
+        <li><a href="{{ contact.instagram }}" target="_blank"><img src="{% static 'icons/instagram.png' %}" alt="Instagram"></a></li>
+      {% endif %}
+      {% if contact.discord %}
+        <li><a href="{{ contact.discord }}" target="_blank"><img src="{% static 'icons/whatsapp.png' %}" alt="Whatsapp"></a></li>
+      {% endif %}
+    </ul>
+  </div>
+{% endblock %}
