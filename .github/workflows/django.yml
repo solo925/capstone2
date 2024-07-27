@@ -1,0 +1,16 @@
+name: Upload Artifact
+
+on: [push]
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Upload innovation.mp4
+      uses: actions/upload-artifact@v2
+      with:
+        name: innovation
+        path: media/videos/innovation.mp4
+
