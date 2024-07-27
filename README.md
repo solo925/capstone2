@@ -134,3 +134,4 @@ portfolio_site/ # Main project directory
 └── manage.py # Django's command-line utility for administrative tasks
 ```
 # capstone2
+# capstone
