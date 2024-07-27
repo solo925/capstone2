@@ -1,0 +1,145 @@
+/* Global Styles */
+/* body {
+    padding-top: 4.5rem; /* Adjust based on your navbar height */
+  /* } */ */
+
+  /* Navbar Styles */
+  .navbar {
+    background-color: #343a40;
+  }
+
+  .navbar-brand,
+  .navbar-nav .nav-link {
+    color: #ffffff;
+  }
+
+  .navbar-brand:hover,
+  .navbar-nav .nav-link:hover {
+    color: #ffffff;
+  }
+
+  /* Card Styles */
+  .card {
+    margin-bottom: 20px;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+
+  .card-text {
+    line-height: 1.6;
+  }
+
+  /* Footer Styles */
+  .footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px 0;
+  }
+  .contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-container h2, .contact-container h4 {
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .contact-container a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .contact-container a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icons {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .social-icons li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .social-icons img {
+    width: 40px;
+    height: 40px;
+  }
+/* CSS to center content and set size to resemble a Word document */
+.autobiography-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.autobiography-page-content {
+  width: 21cm; /* Word document width */
+  height: 29.7cm; /* Word document height */
+  padding: 2cm;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+}
+
+.autobiography-page-content h2 {
+  text-align: center;
+}
+
+.autobiography-page-content p {
+  text-align: justify;
+}
+
+.autobiography-page-content .btn {
+  display: block;
+  margin: 20px auto;
+}
+/* CSS to center content and set size to resemble a Word document */
+.photo-essay-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px); /* Adjust height to account for the navigation bar height if it's 60px */
+  background-color: #f8f9fa; /* Light background color */
+}
+
+.photo-essay-page-content {
+  width: 21cm; /* Word document width */
+  max-height: 29.7cm; /* Word document height */
+  padding: 2cm;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+}
+
+.photo-essay-page-content p {
+  text-align: justify;
+}
+
+.photo-essay-page-content .btn {
+  display: block;
+  margin: 20px auto;
+}
+
+/* CSS to style the profile image */
+.profile-photo {
+  width: 900px; /* Adjust the width as needed */
+  height: 500px; /* Adjust the height as needed */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
