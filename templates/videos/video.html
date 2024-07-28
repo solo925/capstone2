@@ -4,15 +4,6 @@
 <div class="container mt-5">
     <h1 class="mb-4">Videos</h1>
 
-    {% if user.is_superuser %}
-    <h2 class="mb-4">Upload or Provide a Google Drive Video Link</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-    {% endif %}
-
     <div class="mt-5">
         {% for video in videos %}
         <div class="card mb-3">
