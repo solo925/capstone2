@@ -9,7 +9,7 @@
         <div class="card mb-3">
             <div class="card-body">
                 <h5 class="card-title">{{ video.title }}</h5>
-                <p class="card-text">{{ video.abstract }}</p>
+                <p class="card-text">{{ video.abstract|safe }}</p> <!-- Use the 'safe' filter here -->
                 <p class="card-text"><small class="text-muted">{{ video.uploaded_at }}</small></p>
                 
                 {% if video.google_drive_link %}
