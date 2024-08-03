@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-zljm1v)2h4(d$7xp4f=(*%dh_(81g=1re1_+ggk+m*5-^xc8z0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'localhost:8000', '127.0.0.1:8000']
+
 
 
 # Application definition
@@ -148,4 +149,8 @@ CKEDITOR_CONFIGS = {
         'width': '100%',
     },
 }
+
+# settings.py
+
+CSRF_TRUSTED_ORIGINS = ['http://localhost:8000', 'https://localhost:8000']
 
