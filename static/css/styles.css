@@ -6,6 +6,7 @@
   /* Navbar Styles */
   .navbar {
     background-color: #343a40;
+    transition: top 0.3s;
   }
 
   .navbar-brand,

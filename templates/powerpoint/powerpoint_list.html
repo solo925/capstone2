@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4">PowerPoints</h1>
+
+    <div class="mt-5">
+        {% for powerpoint in powerpoints %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ powerpoint.title }}</h5>
+                <p class="card-text"><small class="text-muted">{{ powerpoint.uploaded_at }}</small></p>
+                <a href="{{ powerpoint.file.url }}" class="btn btn-primary" download>Download</a>
+            </div>
+        </div>
+        {% empty %}
+        <p>No PowerPoint files uploaded yet.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

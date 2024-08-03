@@ -8,7 +8,7 @@
       </li>
     {% endfor %}
   </ul>
-  {% if request.user.is_superuser %}
+  {% comment %} {% if request.user.is_superuser %}
     <a href="{% url 'autobiography_create' %}" class="btn btn-primary">Create New Autobiography</a>
-  {% endif %}
+  {% endif %} {% endcomment %}
 {% endblock %}

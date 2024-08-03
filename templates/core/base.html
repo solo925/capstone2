@@ -13,6 +13,25 @@
      <body>
       {% include 'core/navbar.html' %}
        {% block content %} {% endblock %}
+       <script>
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.navbar');
+      
+        window.addEventListener('scroll', function() {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+          if (scrollTop > lastScrollTop) {
+            // Downscroll
+            navbar.style.top = '-60px'; // Hide navbar (adjust -60px based on navbar height)
+          } else {
+            // Upscroll
+            navbar.style.top = '0';
+          }
+      
+          lastScrollTop = scrollTop;
+        });
+      </script>
+      
        
        <!-- Bootstrap JS and other scripts -->
        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

@@ -3,20 +3,29 @@
 {% block content %}
 <div class="container mt-5">
     <h1 class="mb-4">Videos</h1>
-    {% for video in videos %}
-    <div class="card mb-3">
-        <div class="card-body">
-            <h5 class="card-title">{{ video.title }}</h5>
-            <p class="card-text">{{ video.abstract }}</p>
-            <p class="card-text"><small class="text-muted">{{ video.uploaded_at }}</small></p>
-            <video controls class="img-fluid">
-                <source src="{{ video.video_file.url }}" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+
+    <div class="mt-5">
+        {% for video in videos %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ video.title }}</h5>
+                <p class="card-text">{{ video.abstract|safe }}</p> <!-- Use the 'safe' filter here -->
+                <p class="card-text"><small class="text-muted">{{ video.uploaded_at }}</small></p>
+                
+                {% if video.google_drive_link %}
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" 
+                            src="{{ video.get_drive_embed_url }}" 
+                            allowfullscreen></iframe>
+                </div>
+                {% else %}
+                <p>No video available.</p>
+                {% endif %}
+            </div>
         </div>
+        {% empty %}
+        <p>No videos uploaded yet.</p>
+        {% endfor %}
     </div>
-    {% empty %}
-    <p>No videos uploaded yet.</p>
-    {% endfor %}
 </div>
 {% endblock %}

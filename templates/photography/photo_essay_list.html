@@ -9,7 +9,7 @@
       </li>
     {% endfor %}
   </ul>
-  {% if request.user.is_superuser %}
+  {% comment %} {% if request.user.is_superuser %}
     <a href="{% url 'photo_essay_create' %}" class="btn btn-primary">Create New Photo Essay</a>
-  {% endif %}
+  {% endif %} {% endcomment %}
 {% endblock %}
